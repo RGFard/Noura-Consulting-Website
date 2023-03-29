@@ -1,95 +1,77 @@
-.menu {
+.header {
   background-color: rgba(255, 255, 255, 0.7);
   grid-column: 1 / -1;
-  font-size: 5rem;
   position: sticky;
-  top: -2rem;
-  height: 8rem;
+  top: 0;
+  height: 14rem;
+  z-index: 20;
 
   &__narrow {
-    height: 6rem;
+    height: 10rem;
     top: 0;
   }
 }
-// .header {
-//   background-color: $color-grey-dark-1;
-//   grid-column: full-start / col-end 6;
-//   background-image: linear-gradient(
-//       rgba($color-secondary, 0.93),
-//       rgba($color-secondary, 0.93)
-//     ),
-//     url(../img/hero.jpeg);
-//   background-size: cover;
-//   background-position: center;
-//   padding: 8rem;
-//   padding-top: 4rem;
 
-//   display: grid;
-//   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-//   grid-column: full-start / col-end 6;
-//   background-image: linear-gradient(
-//       rgba($color-secondary, 0.93),
-//       rgba($color-secondary, 0.93)
-//     ),
-//     url(../img/hero.jpeg);
-//   background-size: cover;
-//   background-position: center;
-//   padding: 8rem;
-//   padding-top: 4rem;
+.nav {
+  list-style: none;
+  cursor: pointer;
+  font-size: 5rem;
+  font-weight: 900;
 
-//   // display: grid;
-//   // grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-//   // grid-template-columns: minmax(min-content, max-content);
-//   // grid-row-gap: 1.5rem;
-//   // justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  text-align: center;
+  align-items: center;
 
-//   @media only screen and (max-width: $bp-medium) {
-//     grid-column: 1 / -1;
-//   }
+  &__item {
+    color: $color-black;
 
-//   @media only screen and (max-width: $bp-small) {
-//     padding: 5rem;
-//   }
+    &:hover {
+      color: rgba(200, 0, 0, 1);
+    }
 
-//   &__logo {
-//     height: 3rem;
-//     justify-self: center;
-//   }
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(1px);
+    }
 
-//   &__btn {
-//     align-self: start;
-//     justify-self: start;
-//   }
+    &--1 {
+      grid-column: 1/3;
+      font-size: 8rem;
+    }
 
-//   &__seenon-text {
-//     display: grid;
-//     grid-template-columns: 1fr max-content 1fr;
-//     grid-column-gap: 1.5rem;
-//     align-items: center;
+    &-logo {
+      text-shadow: 0.6rem 0.8rem 1rem rgba($color-black, 0.6);
 
-//     font-size: 1.6rem;
-//     color: $color-grey-light-2;
+      display: flex;
+      justify-content: center;
 
-//     &::before,
-//     &::after {
-//       content: "";
-//       height: 1px;
-//       display: block;
-//       background-color: currentColor;
-//     }
-//   }
+      &--1st {
+        color: $color-red;
+      }
 
-//   &__seenon-logos {
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     grid-column-gap: 3rem;
-//     justify-items: center;
-//     align-items: center;
+      &--2nd {
+        color: $color-black;
+      }
+    }
+    &-button {
+      background-color: $color-red;
+      color: $color-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+      width: 80%;
+      border-radius: 2rem;
+      transition: transform 0.1s;
 
-//     img {
-//       max-height: 2.5rem;
-//       max-width: 100%;
-//       filter: brightness(70%);
-//     }
-//   }
-// }
+      &:hover {
+        background-color: rgba(200, 0, 0, 1);
+      }
+
+      &:active,
+      &:focus {
+        transform: translateY(2px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      }
+    }
+  }
+}
