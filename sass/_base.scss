@@ -10,6 +10,8 @@ $color-grey-light-2: #aaa;
 $color-grey-dark-1: #54483a;
 $color-grey-dark-2: #6d5d4b;
 
+$color-red-dark-hover: #c80000;
+
 $color-white: #fff;
 $color-black: #000;
 $color-red: red;
@@ -29,7 +31,6 @@ $bp-small: 37.5em; // 600px; 600/16=32.5
 $bp-xsmall: 25em; // 400px; 400/16=25
 
 // Image Paths
-$img-url-0: "../img/white.jpeg";
 $img-url-1: "../img/mobile-app-faded-with-title-1.jpeg";
 $img-url-2: "../img/api-faded-with-title-1.jpeg";
 $img-url-3: "../img/blockchain-faded-with-title-1.jpeg";
@@ -44,40 +45,53 @@ $img-url-3: "../img/blockchain-faded-with-title-1.jpeg";
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  // font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  font-size: 30%;
 
-  // < 400
-  @media only screen and (max-width: $bp-xsmall) {
-    font-size: 6%;
-  }
-  // 400 - 600
-  @media only screen and (min-width: $bp-xsmall) and (max-width: $bp-small) {
-    font-size: 10%;
-  }
-  // 600 - 800
-  @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
-    font-size: 13%;
-  }
-  //800 - 1000
-  @media only screen and (min-width: $bp-medium) and (max-width: $bp-large) {
-    font-size: 16%;
-  }
-  // 1000 - 1200
-  @media only screen and (min-width: $bp-large) and (max-width: $bp-xlarge) {
+  @media only screen and (max-width: $bp-xlarge) {
     font-size: 20%;
   }
-  // 1200 - 1500
-  @media only screen and (min-width: $bp-xlarge) and (max-width: $bp-xxlarge) {
-    font-size: 23%;
-  }
-  // 1500 - 1900
-  @media only screen and (min-width: $bp-xxlarge) and (max-width: $bp-xxxlarge) {
-    font-size: 30%;
-  }
-  // < 1900
-  @media only screen and (min-width: $bp-xxxlarge) {
-    font-size: 38%;
-  }
+
+  // // < 400
+  // @media only screen and (max-width: $bp-xsmall) {
+  //   // font-size: 6%;
+  //   font-size: 7.8%;
+  // }
+  // // 400 - 600
+  // @media only screen and (min-width: $bp-xsmall) and (max-width: $bp-small) {
+  //   // font-size: 10%;
+  //   font-size: 11.8%;
+  // }
+  // // 600 - 800
+  // @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+  //   // font-size: 13%;
+  //   font-size: 15.6%;
+  // }
+  // //800 - 1000
+  // @media only screen and (min-width: $bp-medium) and (max-width: $bp-large) {
+  //   // font-size: 16%;
+  //   font-size: 19.5%;
+  // }
+  // // 1000 - 1200
+  // @media only screen and (min-width: $bp-large) and (max-width: $bp-xlarge) {
+  //   // font-size: 20%;
+  //   font-size: 23.3%;
+  // }
+  // // 1200 - 1500
+  // @media only screen and (min-width: $bp-xlarge) and (max-width: $bp-xxlarge) {
+  //   // font-size: 23%;
+  //   font-size: 29.1%;
+  // }
+  // // 1500 - 1900
+  // @media only screen and (min-width: $bp-xxlarge) and (max-width: $bp-xxxlarge) {
+  //   // font-size: 30%;
+  //   font-size: 37.4%;
+  // }
+  // // < 1900
+  // @media only screen and (min-width: $bp-xxxlarge) {
+  //   // font-size: 38%;
+  //   font-size: 48.8%;
+  // }
 }
 
 body {
@@ -89,30 +103,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: minmax(10rem, min-content) 180rem 0.1rem repeat(3, 1fr);
+  grid-template-rows: repeat(5, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr)
-    [center-start] repeat(2, [col-start] minmax(6rem, auto) [col-end])
+    [center-start] repeat(2, [col-start] minmax(60rem, auto) [col-end])
     [center-end] minmax(6rem, 1fr) [full-end];
-
-  // < 400
-  // @media only screen and (max-width: $bp-xsmall) {
-  //   grid-template-rows: minmax(6rem, min-content) 25rem 0.1rem repeat(3, 1fr);
-  // }
-  // // 400 - 600
-  // @media only screen and (min-width: $bp-xsmall) and (max-width: $bp-small) {
-  //   grid-template-rows: minmax(6rem, min-content) 28rem 10rem repeat(3, 1fr);
-  // }
-  // // 600 - 800
-  // @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
-  //   grid-template-rows: minmax(6rem, min-content) 1fr 5rem repeat(3, 1fr);
-  // }
-  // // 800 - 1000
-  // @media only screen and (min-width: $bp-medium) and (max-width: $bp-large) {
-  //   grid-template-rows: minmax(6rem, min-content) 1fr 22rem repeat(3, 1fr);
-  // }
-  // // 1000 - 1200
-  // @media only screen and (min-width: $bp-large) and (max-width: $bp-xlarge) {
-  //   grid-template-rows: minmax(6rem, min-content) 1fr 30rem repeat(3, 1fr);
-  // }
 }
