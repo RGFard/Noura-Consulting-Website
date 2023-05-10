@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-    <title>nexter &mdash; your home, your freedom</title>
+    <title>Noura Consulting &mdash; Software and IT Solutions Provider</title>
   </head>
   <body class="container">
-    <header class="header">
-      <div class="header__narrow">
-        <ul class="nav">
+    <div class="header">
+      <nav class="nav">
+        <ul class="nav__list">
           <li class="nav__item--1">
             <div class="nav__item-logo">
               <text class="nav__item-logo--1st">Noura</text>
@@ -29,23 +29,236 @@
           <li class="nav__item">Blog</li>
           <li class="nav__item">Contact</li>
           <li class="nav__item">
-            <div class="nav__item-button">Console</div>
+            <button class="nav__item-console-btn">Console</button>
           </li>
         </ul>
-      </div>
-    </header>
+      </nav>
+      <aside class="sidenav">
+        <input type="checkbox" class="sidenav__checkbox" id="navi-toggle" />
+
+        <label for="navi-toggle" class="sidenav__button">
+          <div class="sidenav__icon">
+            <span class="sidenav__icon-line"></span>
+            <span class="sidenav__icon-line"></span>
+            <span class="sidenav__icon-line"></span>
+          </div>
+        </label>
+
+        <div class="sidenav__background">&nbsp;</div>
+
+        <nav class="sidenav__nav">
+          <ul class="sidenav__list">
+            <li class="sidenav__item">
+              <a href="#" class="sidenav__link">About</a>
+            </li>
+            <li class="sidenav__item">
+              <a href="#" class="sidenav__link">Services</a>
+            </li>
+            <li class="sidenav__item">
+              <a href="#" class="sidenav__link">Blog</a>
+            </li>
+            <li class="sidenav__item">
+              <a href="#" class="sidenav__link">contact</a>
+            </li>
+            <li class="sidenav__item">
+              <a href="#" class="sidenav__link">Console</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
 
     <section class="vision">
-      video
-      <!-- <video class="vision__video" autoplay muted loop>
+      <!-- video -->
+      
+      <video class="vision__video" autoplay muted loop>
         <source src="img/vision.mp4" type="video/mp4" />
         Your browser is not supported!
-      </video> -->
+      </video>
     </section>
-    <section class="services">Services</section>
+    <section class="services">
+      <div class="services__title">
+        <h2 class="heading-2 heading-2--dark">Services</h2>
+      </div>
+      <div class="service">
+        <div class="service__title--1">
+          <h2 class="heading-2 heading-2--light">
+            Ethereum Blockchain Applications
+          </h2>
+        </div>
+        <p class="service__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget felis
+          eget nunc lobortis mattis. A condimentum vitae sapien pellentesque
+          habitant morbi tristique.
+        </p>
+      </div>
+      <div class="service">
+        <div class="service__title--2">
+          <h2 class="heading-2 heading-2--light">Mobile Native Apps</h2>
+        </div>
+        <p class="service__text">
+          Sollicitudin ac orci phasellus egestas tellus rutrum tellus
+          pellentesque eu. Lorem ipsum dolor sit amet consectetur adipiscing.
+          Accumsan sit amet nulla facilisi. A condimentum vitae sapien
+          pellentesque habitant morbi tristique.
+        </p>
+      </div>
+      <div class="service">
+        <div class="service__title--3">
+          <h2 class="heading-2 heading-2--light">API Hub</h2>
+        </div>
+        <p class="service__text">
+          Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget.
+          In iaculis nunc sed augue. Natoque penatibus et magnis dis parturient
+          montes. Quisque egestas diam in arcu cursus euismod. Interdum varius
+          sit amet mattis vulputate enim nulla.
+        </p>
+      </div>
+    </section>
+    <section class="blogs">
+      <div class="blogs__title">
+        <h2 class="heading-2 heading-2--dark">Blogs</h2>
+      </div>
+      <div class="blog">
+        <div class="blog__pictures--1">
+          <img
+            src="img/blog/charity.jpg"
+            alt="Charitable Giving"
+            class="blog__picture--1"
+          />
+        </div>
 
-    <section class="blog">blog</section>
+        <div class="blog__article">
+          <h3 class="heading-3 heading-3--secondry-dark">
+            Charitable Giving using Blockchain Technology
+          </h3>
+          <p class="blog__article__body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis
+            id consectetur purus ut. Non odio euismod lacinia at quis. Eu
+            scelerisque felis imperdiet proin fermentum. Tempor orci dapibus
+            ultrices in iaculis nunc sed augue lacus. Quis vel eros donec ac
+            odio tempor. Quam vulputate dignissim suspendisse in est.
+          </p>
+          <div class="blog__article__footer">
+            <button class="blog__article-button">Learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="blog">
+        <div class="blog__article">
+          <h3 class="heading-3 heading-3--secondry-dark">
+            digitization and cybersecurity
+          </h3>
+          <p class="blog__article__body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis
+            id consectetur purus ut. Non odio euismod lacinia at quis. Eu
+            scelerisque felis imperdiet proin fermentum. Tempor orci dapibus
+            ultrices in iaculis nunc sed augue lacus. Quis vel eros donec ac
+            odio tempor. Quam vulputate dignissim suspendisse in est.
+          </p>
+          <div class="blog__article__footer">
+            <button class="blog__article-button">Learn more</button>
+          </div>
+        </div>
+        <div class="blog__pictures--2">
+          <img
+            src="img/blog/digitization-cybersecurity-fg.jpg"
+            alt="Digitization and Cybersecurity"
+            class="blog__picture--2"
+          />
+        </div>
+      </div>
+      <div class="blog">
+        <div class="blog__pictures--3">
+          <img
+            src="img/blog/digital-identity-fg.jpg"
+            alt="Digital Identity and Credentials"
+            class="blog__picture--3"
+          />
+        </div>
 
-    <footer class="footer">footer</footer>
+        <div class="blog__article">
+          <h3 class="heading-3 heading-3--secondry-dark">
+            digital identity and digital credentials
+          </h3>
+          <p class="blog__article__body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis
+            id consectetur purus ut. Non odio euismod lacinia at quis. Eu
+            scelerisque felis imperdiet proin fermentum. Tempor orci dapibus
+            ultrices in iaculis nunc sed augue lacus. Quis vel eros donec ac
+            odio tempor. Quam vulputate dignissim suspendisse in est.
+          </p>
+          <div class="blog__article__footer">
+            <button class="blog__article-button">Learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="blogs__footer">
+        <button class="blog__article-button blogs__footer-button">
+          See all blog articles
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__item footer__item--1">
+        <div class="footer__item-title">about</div>
+        <div class="footer__item-about">
+          <div>Non odio euismod lacinia at quis. Eu
+            scelerisque felis imperdiet proin fermentum.
+          </div>
+          <div class="footer__item-about-footer">
+            <button class="footer__item-button">Learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__item">
+        <div class="footer__item-title">quick menu</div>
+        <div class="footer__item-body">
+          <div class="footer__item-link">Services</div>
+          <div class="footer__item-link">Blog</div>
+          <div class="footer__item-link">Contact</div>
+          <div class="footer__item-link">Console</div>
+        </div>
+      </div>
+      <div class="footer__item">
+        <div class="footer__item-title">services</div>
+        <div class="footer__item-body">
+          <div class="footer__item-link">Ethereum Applications</div>
+          <div class="footer__item-link">Mobile Native Apps</div>
+          <div class="footer__item-link">API Hub</div>
+        </div>
+      </div>
+      <div class="footer__item">
+        <div class="footer__item-title">social icons</div>
+        <div class="footer__item-body">
+          <div>
+            <svg>
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </div>
+          <div>
+            <svg>
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </div>
+          <div>
+            <svg>
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </div>
+          <div>
+            <svg>
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
