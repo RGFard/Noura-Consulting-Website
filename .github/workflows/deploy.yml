@@ -1,0 +1,27 @@
+name: deploy-site
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "noura-consulting/**"
+
+defaults:
+  run:
+    working-directory: noura-consulting
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo Installing Gatsby and Gatsby-CLI...
+      - run: npm install -g gatsby
+      # 
+      - run: npm install -g gatsby-cli
+      - run: gatsby build
+
+      - uses: shinyinc/action-aws-cli@v1.2
+      - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/auth/latest
